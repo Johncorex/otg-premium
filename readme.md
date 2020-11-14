@@ -1,5 +1,5 @@
 
-# OTG Premium Server - [![Windows](https://ci.appveyor.com/api/projects/status/y69059itp38j0u65?svg=true)](https://ci.appveyor.com/project/Johncorex/otg-premium-version)  ![Linux](https://github.com/Johncorex/OTG-Premium-Version/workflows/CI/badge.svg)
+# OTG Premium Server - [![Windows](https://ci.appveyor.com/api/projects/status/y69059itp38j0u65?svg=true)](https://ci.appveyor.com/project/Johncorex/otg-king)  ![Linux](https://github.com/Johncorex/OTG-Premium-Version/workflows/CI/badge.svg)
   [![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?label=discord)](https://discord.gg/xbKZHDg)
 
 ![enter image description here](https://i.postimg.cc/DyHyzWCZ/arte-otg-menor.jpg)
@@ -29,8 +29,8 @@ Usamos o [issue tracker no GitHub](https://github.com/Johncorex/OTG-Premium-Vers
 ### Special Thanks
 
 -   our partners
--   our crew (johncore, ericknunes, leu, marson schneider, douglas, guibruxo)
--   our testers (renan ulian, tiago dias, jaison, will raduan, cristian and roger)
+-   our crew (johncore, erimyth, nolis, toninho, renan ulian, ericknunes, leu, marson schneider, douglas, guibruxo)
+-   our testers (tiago dias, jaison, will raduan, cristian and roger)
 -   [our contributors](https://github.com/Johncorex/OTG-Premium-Version/graphs/contributors)
 -   [cjaker](https://github.com/Eternal-Scripts)
 -   [slavidodo](https://github.com/slavidodo)
