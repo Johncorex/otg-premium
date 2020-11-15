@@ -599,6 +599,9 @@ class Game
 		void setSkillSchedule(uint16_t skillrate) {
 			skillSchedule = (skillSchedule * skillrate)/100;
 		}
+		
+		void playerInspectItem(Player* player, const Position& pos);
+        void playerInspectItem(Player* player, uint16_t itemId, uint8_t itemCount, bool cyclopedia);
 
 	private:
 		void checkImbuements();

@@ -1302,7 +1302,12 @@ class Player final : public Creature, public Cylinder
 				client->sendAddMarker(pos, markType, desc);
 			}
 		}
-    void sendCyclopediaCharacterBaseInformation() {
+		void sendItemInspection(uint16_t itemId, uint8_t itemCount, const Item* item, bool cyclopedia) {
+			if (client) {
+				client->sendItemInspection(itemId, itemCount, item, cyclopedia);
+			}
+		}
+        void sendCyclopediaCharacterBaseInformation() {
 			if (client) {
 				client->sendCyclopediaCharacterBaseInformation();
 			}

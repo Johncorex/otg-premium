@@ -115,11 +115,14 @@ class ProtocolGame final : public Protocol
 		void parseFightModes(NetworkMessage& msg);
 		void parseAttack(NetworkMessage& msg);
 		void parseFollow(NetworkMessage& msg);
+		
+		void sendItemInspection(uint16_t itemId, uint8_t itemCount, const Item* item, bool cyclopedia);
+        void parseInspectionObject(NetworkMessage& msg);
 
-    void parseCyclopediaCharacterInfo(NetworkMessage& msg);
-    void parseTournamentLeaderboard(NetworkMessage& msg);
+        void parseCyclopediaCharacterInfo(NetworkMessage& msg);
+        void parseTournamentLeaderboard(NetworkMessage& msg);
 
-    void parseBugReport(NetworkMessage& msg);
+        void parseBugReport(NetworkMessage& msg);
 		void parseDebugAssert(NetworkMessage& msg);
 		void parseRuleViolationReport(NetworkMessage &msg);
 
