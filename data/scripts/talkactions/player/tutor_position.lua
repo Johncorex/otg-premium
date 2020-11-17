@@ -7,8 +7,7 @@ function tutorPosition.onSay(player, words, param)
 	end
 
 	local position = player:getPosition()
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your current position is: \z
-		" .. position.x .. ", " .. position.y .. ", " .. position.z .. ".")
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your current position is: \n " .. position.x .. ", " .. position.y .. ", " .. position.z .. ".")
 	return false
 end
 
