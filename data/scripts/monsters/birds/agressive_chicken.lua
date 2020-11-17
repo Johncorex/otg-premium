@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Parrot")
+local mType = Game.createMonsterType("Agressive Chicken")
 local monster = {}
 
-monster.description = "a parrot"
+monster.description = "a agressive chicken"
 monster.experience = 0
 monster.outfit = {
-	lookType = 217,
+	lookType = 111,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,16 +13,16 @@ monster.outfit = {
 	lookMount = 0
 }
 
-monster.health = 25
-monster.maxHealth = 25
+monster.health = 15000
+monster.maxHealth = 15000
 monster.race = "blood"
-monster.corpse = 6056
-monster.speed = 320
-monster.summonCost = 250
+monster.corpse = 6042
+monster.speed = 128
+monster.summonCost = 220
 monster.maxSummons = 0
 
 monster.changeTarget = {
-	interval = 5000,
+	interval = 4000,
 	chance = 0
 }
 
@@ -31,18 +31,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = false,
 	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 25,
+	runHealth = 15,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -59,32 +59,20 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{text = "BR? PL? SWE?", yell = false},
-	{text = "Screeech!", yell = false},
-	{text = "Neeewbiiieee!", yell = false},
-	{text = "You advanshed, you advanshed!", yell = false},
-	{text = "Hope you die and loooosh it!", yell = false},
-	{text = "Hunterrr ish PK!", yell = false},
-	{text = "Shhtop whining! Rraaah!", yell = false},
-	{text = "I'm heeerrre! Screeeech!", yell = false},
-	{text = "Leeave orrr hunted!!", yell = false},
-	{text = "Blesshhh my stake! Screeech!", yell = false},
-	{text = "Tarrrrp?", yell = false},
-	{text = "You are corrrrupt! Corrrrupt!", yell = false},
-	{text = "You powerrrrrrabuserrrrr!", yell = false},
-	{text = "You advanshed, you advanshed!", yell = false}
+	{text = "Gokgoooook", yell = false},
+	{text = "Cluck Cluck", yell = false}
 }
 
 monster.loot = {
-}
-
-monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -5, effect = CONST_ME_DRAWBLOOD}
+	{id = "meat", chance = 2120, maxCount = 2},
+	{id = 2695, chance = 950},
+	{id = "worm", chance = 10000, maxCount = 3},
+	{id = "chicken feather", chance = 20000}
 }
 
 monster.defenses = {
 	defense = 5,
-	armor = 2
+	armor = 1
 }
 
 monster.elements = {
