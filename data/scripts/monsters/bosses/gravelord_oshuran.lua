@@ -50,7 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnPoison = true,
 	pet = false
 }
 
@@ -70,15 +70,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 115},
-	{id = 7589, chance = 17500},
-	{id = 2144, chance = 15960},
-	{id = 2143, chance = 15000},
-	{id = 2214, chance = 15040},
-	{id = 2656, chance = 500},
-	{id = 7893, chance = 900},
-	{id = 8904, chance = 300},
-	{id = 2175, chance = 4650}
+	{id = "gold coin", chance = 84620, maxCount = 115},
+	{id = "ring of healing", chance = 30770},
+	{id = "spellbook", chance = 23450},
+	{id = "black pearl", chance = 7690},
+	{id = "spellscroll of prophecies", chance = 7690},
+	{id = "white pearl", chance = 7690},
+	{id = "blue robe", chance = 465}
 }
 
 monster.attacks = {
@@ -99,12 +97,12 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 80},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 10},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 100},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 35},
-	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_ICEDAMAGE, percent = 50},
+	{type = COMBAT_HOLYDAMAGE , percent = -1},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

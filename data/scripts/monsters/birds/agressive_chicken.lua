@@ -1,29 +1,29 @@
-local mType = Game.createMonsterType("Infernal Frog")
+local mType = Game.createMonsterType("Agressive Chicken")
 local monster = {}
 
-monster.description = "an infernal frog"
-monster.experience = 190
+monster.description = "a agressive chicken"
+monster.experience = 0
 monster.outfit = {
-	lookType = 224,
-	lookHead = 69,
-	lookBody = 66,
-	lookLegs = 69,
-	lookFeet = 66,
+	lookType = 111,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
 
-monster.health = 655
-monster.maxHealth = 655
+monster.health = 15000
+monster.maxHealth = 15000
 monster.race = "blood"
-monster.corpse = 6079
-monster.speed = 200
-monster.summonCost = 0
+monster.corpse = 6042
+monster.speed = 128
+monster.summonCost = 220
 monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 10
+	chance = 0
 }
 
 monster.strategiesTarget = {
@@ -33,21 +33,21 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = false,
 	attackable = true,
-	hostile = true,
-	convinceable = false,
-	pushable = false,
+	hostile = false,
+	convinceable = true,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = true,
-	canPushCreatures = true,
+	canPushItems = false,
+	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 40,
+	runHealth = 15,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
+	canWalkOnPoison = false,
 	pet = false
 }
 
@@ -59,30 +59,26 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{text = "Ribbit!", yell = false},
-	{text = "Ribbit! Ribbit!", yell = false},
-	{text = "No Kisses for you!", yell = false}
+	{text = "Gokgoooook", yell = false},
+	{text = "Cluck Cluck", yell = false}
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 73330, maxCount = 65}
-}
-
-monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20, effect = CONST_ME_DRAWBLOOD},
-	{name ="combat", interval = 2000, chance = 30, type = COMBAT_EARTHDAMAGE, minDamage = -16, maxDamage = -32, shootEffect = CONST_ANI_POISON, target = true}
+	{id = "meat", chance = 2120, maxCount = 2},
+	{id = 2695, chance = 950},
+	{id = "worm", chance = 10000, maxCount = 3},
+	{id = "chicken feather", chance = 20000}
 }
 
 monster.defenses = {
 	defense = 5,
-	armor = 5,
-	{name ="speed", interval = 2000, chance = 20, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 8000}
+	armor = 1
 }
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
@@ -95,7 +91,7 @@ monster.elements = {
 monster.immunities = {
 	{type = "paralyze", condition = false},
 	{type = "outfit", condition = false},
-	{type = "invisible", condition = true},
+	{type = "invisible", condition = false},
 	{type = "bleed", condition = false}
 }
 

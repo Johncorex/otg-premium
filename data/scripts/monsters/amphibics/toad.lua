@@ -64,11 +64,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 80000, maxCount = 20},
+	{id = "gold coin", chance = 81950, maxCount = 20},
 	{id = "war hammer", chance = 148},
-	{id = "mace", chance = 2854},
-	{id = 2667, chance = 20000},
-	{id = "poisonous slime", chance = 4761}
+	{id = "mace", chance = 2964},
+	{id = 2667, chance = 20000},--fish
+	{id = "poisonous slime", chance = 4999}
 }
 
 monster.attacks = {
@@ -77,8 +77,8 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 15,
+	defense = 6,
+	armor = 6,
 	{name ="speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000}
 }
 
