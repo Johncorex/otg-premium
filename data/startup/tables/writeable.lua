@@ -816,8 +816,7 @@ SignTable = {
 	[2] = {
 		itemId = 8835,
 		itemPos = {x = 32053, y = 31886, z = 6},
-		text = "Sorcerers of Tibia, use the power of the elements to hunt down your foes and strike \z
-		fear in the heart of your enemies!"
+		text = "Sorcerers of Tibia, use the power of the elements to hunt down your foes and strike \n fear in the heart of your enemies!"
 	},
 	[3] = {
 		itemId = 3739,
@@ -847,8 +846,7 @@ SignTable = {
 	[8] = {
 		itemId = 1815,
 		itemPos = {x = 32057, y = 31893, z = 6},
-		text = "Careful with the dustbin! Every item you throw into it will be PERMANENTLY deleted. \z
-		So consider carefully if you really, really want to delete an item before you lay it on the dustbin."
+		text = "Careful with the dustbin! Every item you throw into it will be PERMANENTLY deleted. \n So consider carefully if you really, really want to delete an item before you lay it on the dustbin."
 	},
 	[9] = {
 		itemId = 1441,
