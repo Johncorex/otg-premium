@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2020  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -540,14 +540,14 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xAA: addGameTask(&Game::playerCreatePrivateChannel, player->getID()); break;
 		case 0xAB: parseChannelInvite(msg); break;
 		case 0xAC: parseChannelExclude(msg); break;
-		case 0xB1: parseHighscores(msg); break;
+    case 0xB1: parseHighscores(msg); break;
 		case 0xBE: addGameTask(&Game::playerCancelAttackAndFollow, player->getID()); break;
     case 0xC7: parseTournamentLeaderboard(msg); break;
 		case 0xC9: /* update tile */ break;
 		case 0xCA: parseUpdateContainer(msg); break;
 		case 0xCB: parseBrowseField(msg); break;
 		case 0xCC: parseSeekInContainer(msg); break;
-		case 0xCD: parseInspectionObject(msg); break;
+    case 0xCD: parseInspectionObject(msg); break;
 		case 0xD2: addGameTask(&Game::playerRequestOutfit, player->getID()); break;
 		//g_dispatcher.addTask(createTask(std::bind(&Modules::executeOnRecvbyte, g_modules, player, msg, recvbyte)));
 		case 0xD3: g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::parseSetOutfit, this, msg))); break;
@@ -1219,7 +1219,6 @@ void ProtocolGame::parseInspectionObject(NetworkMessage& msg) {
 
 void ProtocolGame::sendItemInspection(uint16_t itemId, uint8_t itemCount, const Item* item, bool cyclopedia) {
 	NetworkMessage msg;
-	msg.reset();
 	msg.addByte(0x76);
 	msg.addByte(0x00);
 	msg.addByte(cyclopedia ? 0x01 : 0x00);
@@ -4329,8 +4328,9 @@ void ProtocolGame::sendImbuementWindow(Item* item)
 	}
 
 	const ItemType& it = Item::items[item->getID()];
-	uint8_t slot = it.imbuingSlots;
+
 	bool itemHasImbue = false;
+	uint8_t slot = it.imbuingSlots;
 	for (uint8_t i = 0; i < slot; i++) {
 		uint32_t info = item->getImbuement(i);
 		if (info >> 8) {
@@ -4339,11 +4339,6 @@ void ProtocolGame::sendImbuementWindow(Item* item)
 		}
 	}
 
-	std::vector<Imbuement*> imbuements = g_imbuements->getImbuements(player, item);
-	if (!itemHasImbue && imbuements.empty()) {
-		player->sendTextMessage(MESSAGE_EVENT_ADVANCE, "You did not collect enough knowledge from the ancient Shapers. Visit the Shaper temple in Thais for help.");
-		return;
-	}
 	// Seting imbuing item
 	player->inImbuing(item);
 
@@ -4365,6 +4360,7 @@ void ProtocolGame::sendImbuementWindow(Item* item)
 		}
 	}
 
+	std::vector<Imbuement*> imbuements = g_imbuements->getImbuements(player, item);
 	std::unordered_map<uint16_t, uint16_t> needItems;
 	msg.add<uint16_t>(imbuements.size());
 	for (Imbuement* ib : imbuements) {
