@@ -33,7 +33,7 @@ function vlarkorthLever.onUse(creature, item, fromPosition, target, toPosition, 
 			player:getPosition():sendMagicEffect(CONST_ME_POFF)
 			player:teleportTo(Position(setting.playerTeleport), false)
 			doSendMagicEffect(player:getPosition(), CONST_ME_TELEPORT)
-			setPlayerStorageValue(player,setting.storage, os.time() + 30 * 60 * 60)
+			setPlayerStorageValue(player,setting.storage, os.time() + 15 * 60 * 60 * 60)
             player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have 30 minute(s) to defeat the King Zelos.')
 				addEvent(function()
 					local spectatorsVlarkorth = Game.getSpectators(Position(setting.centerRoom), false, false, 25, 25, 25, 25)
