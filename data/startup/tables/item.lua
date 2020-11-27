@@ -161,6 +161,6 @@ ItemUnique = {
 	-- data\scripts\actions\quests\grave_danger\cobra_bastion
 	[40028] = {
 		itemId = 36319,
-		itemPos = {x = 33395, y = 32660, z = 6}
+		itemPos = {x = 33395, y = 32660, z = 6} --Scarlett Etzel
 	}
 }
