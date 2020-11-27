@@ -1671,6 +1671,14 @@ Storage = {
 		CobraBastion = {
 			Questline = 52311,
 			ScarlettTimer = 52312
+		},
+		Tombs = {
+			CountVlarkorthTimer = 52313,
+			LordAzaramTimer = 52314,
+			EarlOsamTimer = 52315,
+			SirBaelocTimer = 52316,
+			DukeKruleTimer = 52317,
+			KingZelosTimer = 52318
 		}
 	},
 	RottinWoodAndMaried = {
